@@ -1,0 +1,57 @@
+plugins {
+    //id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.2.61'
+}
+
+group 'com.github.br11'
+version '1.0-SNAPSHOT'
+
+repositories {
+    maven { url '/Users/marcio.luisdasilva/.m2/repository' }
+    mavenCentral()
+    maven { url 'http://jcenter.bintray.com' }
+}
+
+dependencies {
+    compile 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    
+    compile 'org.slf4j:slf4j-simple:1.7.25'
+    compile 'com.uchuhimo:konf:0.11'
+
+    compile "org.jooby:jooby-lang-kotlin:1.5.1"
+    compile "org.jooby:jooby-jackson:1.5.1"
+    compile "org.jooby:jooby-jdbi3:1.5.1"
+    compile "org.jooby:jooby-flyway:1.5.1"
+    compile "org.jooby:jooby-apitool:1.5.1"
+    compile "org.jooby:jooby-netty:1.5.1"
+    compile "io.rest-assured:rest-assured:3.1.1"
+    
+    compile "org.jdbi:jdbi3-kotlin-sqlobject:1.5.1"
+    compile "org.jdbi:jdbi3-kotlin:1.5.1"
+    compile "org.jdbi:jdbi3-kotlin-sqlobject:3.4.0"
+    compile "org.jdbi:jdbi3-kotlin:3.4.0"
+
+    compile "com.h2database:h2:1.4.197"
+
+    testCompile 'junit:junit:4.12'
+    testCompile "org.junit.platform:junit-platform-runner:1.0.0"
+    testCompile "org.jetbrains.spek:spek-api:1.1.5"
+    testCompile "org.jetbrains.spek:spek-junit-platform-engine:1.1.5"
+
+    compile "com.google.gradle:osdetector-gradle-plugin:1.4.0"
+    compile "io.spring.gradle:dependency-management-plugin:1.0.4.RELEASE"
+    compile "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.41"
+    compile "org.jooby:jooby-gradle-plugin:1.5.1"
+    compile "org.junit.platform:junit-platform-gradle-plugin:1.0.0"
+
+    compile 'br.com.conductor.pier:pier-sdk-java:2.74.2'
+
+    compile 'de.huxhorn.sulky:de.huxhorn.sulky.ulid:8.2.0'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
