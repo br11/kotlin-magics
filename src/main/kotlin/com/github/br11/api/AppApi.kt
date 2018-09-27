@@ -1,5 +1,7 @@
 package com.github.br11.api
 
+import com.github.br11.services.CorporateCustomer
+import com.github.br11.services.NewCorporateCustomerService
 import org.jooby.*
 import org.jooby.apitool.ApiTool
 import org.jooby.json.Jackson
@@ -88,6 +90,22 @@ class AppApi : Kooby({
             }
             Results.noContent()
         }
+    }
+
+    path("/api/customer") {
+
+        /**
+         * Add a new CorporateCustomer to the database.
+         *
+         * @param body CorporateCustomer object that needs to be added to the database.
+         * @return Returns a saved CorporateCustomer.
+         */
+        post {
+            val request = body<CorporateCustomer>()
+
+            NewCorporateCustomerService().execute(request)
+        }
+
     }
 })
 

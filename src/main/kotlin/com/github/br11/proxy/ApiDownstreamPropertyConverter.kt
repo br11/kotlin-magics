@@ -2,7 +2,7 @@ package com.github.br11.proxy
 
 import kotlin.reflect.*
 
-class ApiPropertyConverter<A, T, R>(val prop: KMutableProperty1<T, A>, val converter: KFunction1<R, A>) : KMutableProperty1<T, R> {
+class ApiDownstreamPropertyConverter<A, T, R>(val prop: KMutableProperty1<T, A>, val converter: KFunction1<R, A>) : KMutableProperty1<T, R> {
 
     override fun invoke(p1: T): R {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -41,20 +41,12 @@ class ApiPropertyConverter<A, T, R>(val prop: KMutableProperty1<T, A>, val conve
     override fun set(receiver: T, value: R) {
         prop.set(receiver, converter.invoke(value))
     }
+
+    override fun toString(): String {
+        return "{$converter=$prop}"
+    }
 }
 
-fun <A : Any?, T : Any, R : Any> convert(prop: KMutableProperty1<T, A>, converter: KFunction1<R, A>): KMutableProperty1<T, R> {
-    return ApiPropertyConverter<A, T, R>(prop, converter)
-}
-
-fun <A : Any?, T : Any, R : Any> convert(propConv: Pair<KFunction1<R, A>, KMutableProperty1<T, A>>): KMutableProperty1<T, R> {
-    return ApiPropertyConverter<A, T, R>(propConv.second, propConv.first)
-}
-
-fun idToUlid(id: Long): String {
-    return ""
-}
-
-fun ulidToId(ulid: String): Long {
-    return 1L
+fun <A : Any?, T : Any, R : Any> convert(conversion: Pair<KFunction1<R, A>, KMutableProperty1<T, A>>): KMutableProperty1<T, R> {
+    return ApiDownstreamPropertyConverter<A, T, R>(conversion.second, conversion.first)
 }

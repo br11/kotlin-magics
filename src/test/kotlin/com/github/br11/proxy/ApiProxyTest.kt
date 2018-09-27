@@ -4,6 +4,8 @@ import br.com.conductor.pier.api.v2.GlobaltagcadastroclienteApi
 import br.com.conductor.pier.api.v2.invoker.ApiException
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaPersist
 import br.com.conductor.pier.api.v2.model.PessoaJuridicaAprovadaResponse
+import com.github.br11.api.com.github.br11.proxy.conversions.idToUlid
+import com.github.br11.api.com.github.br11.proxy.conversions.ulidToId
 import com.github.br11.services.CorporateCustomer
 
 class ApiProxyTest {
@@ -21,7 +23,7 @@ class ApiProxyTest {
                             CorporateCustomer::cnpj to PessoaJuridicaAprovadaPersist::setCnpj,
                             CorporateCustomer::name to PessoaJuridicaAprovadaPersist::setRazaoSocial,
                             CorporateCustomer::shortName to PessoaJuridicaAprovadaPersist::setNomeFantasia,
-                            CorporateCustomer::productUlId to PessoaJuridicaAprovadaPersist::setIdProduto,
+                            CorporateCustomer::productUlId to convert(::ulidToId to PessoaJuridicaAprovadaPersist::setIdProduto),
                             CorporateCustomer::email to PessoaJuridicaAprovadaPersist::setEmail,
                             CorporateCustomer::paymentDay to PessoaJuridicaAprovadaPersist::setDiaVencimento,
                             CorporateCustomer::accountNumber to PessoaJuridicaAprovadaPersist::setNumeroContaCorrente,
@@ -33,7 +35,7 @@ class ApiProxyTest {
 
                     .respond(CorporateCustomer::class)
                     .mapping(
-                            PessoaJuridicaAprovadaResponse::getId to convert(CorporateCustomer::ulid to ::toUlid),
+                            PessoaJuridicaAprovadaResponse::getId to convert(::idToUlid to CorporateCustomer::ulid),
                             PessoaJuridicaAprovadaResponse::getCnpj to CorporateCustomer::cnpj,
                             PessoaJuridicaAprovadaResponse::getRazaoSocial to CorporateCustomer::name,
                             PessoaJuridicaAprovadaResponse::getNomeFantasia to CorporateCustomer::shortName,
@@ -49,17 +51,9 @@ class ApiProxyTest {
                     .map(ApiException::class to RuntimeException::class)
         }
 
-
         val response = proxy.process(CorporateCustomer(""))
 
-    }
-
-    fun toUlid(id: Long): String {
-        return ""
-    }
-
-    fun toId(ulid: String): Long {
-        return 1L
+        println(response)
     }
 
 }
