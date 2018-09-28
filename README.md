@@ -6,7 +6,9 @@
 ./gradlew clean build install -x test
 
 #### Running
+
 > com.github.br11.kondoocthor.customer.api.CustomerApi::main
+
 ```
 [main] INFO com.github.br11.kondoocthor.customer.api.CustomerApi - [dev@netty]: Server started in 1266ms
 
@@ -32,6 +34,8 @@ listening on:
 ### More
 
 #### Documenting API with javadoc - Magic with Kooby & Swagger
+
+Source code
 ````kotlin
 class CustomerApi : Kooby({
 
@@ -69,7 +73,9 @@ class CustomerApi : Kooby({
         /* to be continued */
 ````
 
-![alt text](kotlin-magics/apidoc.png)
+This is the output
+.
+![](./apidoc.png)
 
 #### Fluent Interface for API Proxing - Uhu!!! a lot of relections :P
 ````kotlin
