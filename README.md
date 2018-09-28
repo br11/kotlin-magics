@@ -47,6 +47,16 @@ class CustomerApi : Kooby({
     path("/api/customer") {
     
         /**
+         * Find CorporateCustomer by ULID
+         *
+         * @param ulid CorporateCustomer ULID.
+         * @return Returns `200` with a single CorporateCustomer or `404`
+         */
+        get("/:ulid") {
+            CorporateCustomerService().retrieveApproved(param<String>("ulid"))
+        }
+    
+        /**
          * Add a new CorporateCustomer to the database.
          *
          * @param body CorporateCustomer object that needs to be added to the database.
