@@ -33,7 +33,10 @@ listening on:
 
 ### More
 
-#### Documenting API with javadoc - Magic with Kooby & Swagger
+#### Documenting API with javadoc - Magic with Kooby & ApiTool
+
+Kooby is the Jooby for Kotlin distribution
+ApiTool is a Jooby module for API development
 
 Source code
 ````kotlin
@@ -74,6 +77,7 @@ class CustomerApi : Kooby({
 ````
 
 This is the output
+The API documentation derived from the Javadoc
 .
 ![](./apidoc.png)
 
