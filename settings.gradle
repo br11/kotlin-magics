@@ -1,2 +1,3 @@
 rootProject.name = 'kotling-magics'
 
+include 'kotlin-api-proxy', 'kotlin-kondoocthor-api-proxy'
