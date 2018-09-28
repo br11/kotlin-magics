@@ -69,7 +69,7 @@ class CustomerApi : Kooby({
         /* to be continued */
 ````
 
-![alt text](https://swagger.io/swagger/media/Images/Tools/Opensource/Swagger_EditorNew.PNG?ext=.png)
+![alt text](kotlin-magics/apidoc.png)
 
 #### Fluent Interface for API Proxing - Uhu!!! a lot of relections :P
 ````kotlin
