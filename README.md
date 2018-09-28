@@ -75,8 +75,7 @@ class CustomerApi : Kooby({
         
         /* to be continued */
 ````
-
-This is the output  
+   
 The API documentation derived from the Javadoc  
 
 ![](./apidoc.png)
