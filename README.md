@@ -35,8 +35,8 @@ listening on:
 
 #### Documenting API with javadoc - Magic with Kooby & ApiTool
 
-Kooby is the Jooby for Kotlin distribution
-ApiTool is a Jooby module for API development
+Kooby is the Jooby for Kotlin distribution  
+ApiTool is a Jooby module for API development  
 
 Source code
 ````kotlin
@@ -76,9 +76,9 @@ class CustomerApi : Kooby({
         /* to be continued */
 ````
 
-This is the output
-The API documentation derived from the Javadoc
-.
+This is the output  
+The API documentation derived from the Javadoc  
+
 ![](./apidoc.png)
 
 #### Fluent Interface for API Proxing - Uhu!!! a lot of relections :P
