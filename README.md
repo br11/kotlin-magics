@@ -80,7 +80,7 @@ The API documentation derived from the Javadoc
 
 ![](./apidoc.png)
 
-#### Fluent Interface for API Proxing - Uhu!!! a lot of relections :P
+#### Fluent Interface for API Proxing - Uhu!!! a lot of reflections :P
 ````kotlin
 class CorporateCustomerService {
 
