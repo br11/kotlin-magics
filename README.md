@@ -81,6 +81,10 @@ The API documentation derived from the Javadoc
 ![](./apidoc.png)
 
 #### Fluent Interface for API Proxing - Uhu!!! a lot of reflections :P
+
+I know it needs clarification but all I have for now is this brief introduction.
+Basically it takes a message of one type and sends it upstream after translating into another one. Most of the code is property mapping from the type received through our API into the type required by the uptream API of the third party.
+
 ````kotlin
 class CorporateCustomerService {
 
@@ -176,3 +180,6 @@ class CorporateCustomerService {
     }
 }
 ````
+  
+    
+Work in progress ...  
