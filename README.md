@@ -1,9 +1,9 @@
 # kotlin-magics
 ## Kotlin Advanced API Swagger Reflection 
-This project is to ilustrate POC for a project requiring a translation between two very similar APIs.  
-For this purpose create an API with field names in English and another having almost the same fields but with names in Portuguese.  
+This project is a POC for a project requiring a translation between two very similar APIs.  
+For this purpose we create one API with field names in English and another one having almost the same fields but with names in Portuguese.  
   
-A DSL (Domain-specific Language) was designed to allow all the logic to be accommodated in a single file keeping the implementation very abstract, short yet easy to understand.
+A DSL (Domain-specific Language) was designed to allow all the translations to be declaratively specified, so it's easy to write and maintain, very abstract, so it's short and allows to continuously learn about the domain.  
 
 ### Basics
 #### build
