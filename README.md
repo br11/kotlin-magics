@@ -1,6 +1,6 @@
 # kotlin-magics
 ```
-#### Lean Goals.   
+**Lean Goals.**   
 * **Deliver as fast as possible.**  
 * **Decide as late as possible.**   
 ```
