@@ -66,7 +66,7 @@ listening on:
 
 #### Documenting API with javadoc - Magic with Kooby & ApiTool
 Here is our API implemented with Jooby for Kotlin.  
-The decision of using Jooby was made mainly because the ApiTool module of Jooby has the fantastic feature of generate the Swagger documentation from the Javadoc.
+The decision of using Jooby was made mainly because the ApiTool module of Jooby implements a large number of integrations, including one with Swagger that generates the REST API documentation from the Javadoc.
 
 Source code
 ````kotlin
