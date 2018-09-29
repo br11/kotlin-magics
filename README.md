@@ -6,7 +6,7 @@
   
   
 Avoid long cycles of specification and refinements to start to implement.  
-Write code that doesn't became obsolete as you learn more on the business.  
+Write code that doesn't became obsolete as you learn more about the business.  
   
     
 Have all this by programming at the appropriate level of abstraction.  
