@@ -1,5 +1,5 @@
 # kotlin-magics
-## Kotlin Advanced API Swagger Reflection 
+## API | Swagger | Reflection 
 This project is a POC for a project requiring a translation between two very similar APIs.  
 For this purpose we create one API with field names in English and another one having almost the same fields but with names in Portuguese.  
 
