@@ -1,6 +1,6 @@
 # kotlin-magics
 
-**Lean Goals**   
+**Lean Principles**   
 * **Deliver as fast as possible**  
 * **Decide as late as possible**   
   
