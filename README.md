@@ -30,7 +30,7 @@ For this purpose we create one API with field names in English and another one h
 Then a DSL (Domain-specific Language) was designed:. 
 1. to make the code to be short, so it's easy to write;
 2. to make data translation to be declaratively specified, so it's easy to understand and maintain,. 
-3. to make the implementation to be very abstract, avoiding details that emerges or succumbs constantly.  
+3. to make the implementation to be very abstract, avoiding details that permanently need clarification.  
 
 ### Basics
 #### build
@@ -193,7 +193,7 @@ class CorporateCustomerService {
                                             SocioAprovadoResponse::getDataNascimento to Partner::birthDate,
                                             SocioAprovadoResponse::getProfissao to Partner::occupation,
                                             SocioAprovadoResponse::getEmail to Partner::email,
-
+ok
                                             nestedList(SocioAprovadoResponse::getTelefones to Partner::phoneNumbers)
                                                     .mapping(TelefonePessoaAprovadaResponse::getIdTipoTelefone to PhoneNumber::idType,
                                                             TelefonePessoaAprovadaResponse::getDdd to PhoneNumber::areaCode,
