@@ -1,8 +1,8 @@
 # kotlin-magics
 
 ####Lean Goals.   
-* **Deliver as fast as possible.  
-* **Decide as late as possible.   
+* **Deliver as fast as possible.**  
+* **Decide as late as possible.**   
   
   
 Avoid long cycles of specification and refinements to start to implement.  
