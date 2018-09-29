@@ -1,4 +1,20 @@
 # kotlin-magics
+
+Lean Goals. 
+Deliver as fast as possible. 
+Decide as late as possible. 
+  
+  
+Avoid long cycles of specification and refinements to start to implement.  
+Write code that doesn't became obsolete as you learn more on the business.  
+  
+    
+Have all this by programming at the appropriate level of abstraction.  
+  
+  
+Creating your programming languages.  
+  
+
 ## API | Swagger | Reflection 
 This project is a POC for a project requiring a translation between two very similar APIs.  
 For this purpose we create one API with field names in English and another one having almost the same fields but with names in Portuguese.  
