@@ -28,8 +28,9 @@ For this purpose we create one API with field names in English and another one h
 
 
 Then a DSL (Domain-specific Language) was designed:. 
-1. to allow all the translations to be declaratively specified, so it's easy to write and maintain,. 
-2. to be very abstract, so it's short and allows to continuously learn about the domain without changing this code.  
+1. to make the code to be short, so it's easy to write;
+2. to make data translation to be declaratively specified, so it's easy to understand and maintain,. 
+3. to make the implementation to be very abstract, avoiding details that emerges or succumbs constantly.  
 
 ### Basics
 #### build
