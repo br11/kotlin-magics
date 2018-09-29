@@ -6,7 +6,7 @@ For this purpose we create one API with field names in English and another one h
 
 
 
-A DSL (Domain-specific Language) was designed:. 
+Then a DSL (Domain-specific Language) was designed:. 
 1. to allow all the translations to be declaratively specified, so it's easy to write and maintain,. 
 2. to be very abstract, so it's short and allows to continuously learn about the domain without changing this code.  
 
@@ -43,9 +43,8 @@ listening on:
 ### More
 
 #### Documenting API with javadoc - Magic with Kooby & ApiTool
-
-Kooby is the Kotlin distribution of Jooby.. 
-ApiTool is the API development module of Jooby and Kooby.. 
+Here is our API implemented with Jooby for Kotlin.  
+The decision of using Jooby was made mainly because the ApiTool module of Jooby has the fantastic feature of generate the Swagger documentation from the Javadoc.
 
 Source code
 ````kotlin
