@@ -224,10 +224,12 @@ Sets the upstream API that in our case is not a upstream http server but a java 
             use(GlobaltagcadastroclienteApi())
 ````
   
+  
 Receives the requests from our clients
 ````kotlin
                     .receive(CorporateCustomer::class)
 ````
+  
   
 Sending requests upstream making the data mapping and translations
 ````kotlin
@@ -267,10 +269,12 @@ Sending requests upstream making the data mapping and translations
                                                             PhoneNumber::extension to TelefonePessoaAprovadaPersistValue::setRamal)))
 ````
   
+  
 Gets the upstream response 
 ````kotlin
                     .getUpstreamResponse()
 ````
+  
   
 Responds to our client with the upstream response translated into our response message
 ````kotlin
@@ -310,12 +314,14 @@ ok
                                                             TelefonePessoaAprovadaResponse::getRamal to PhoneNumber::extension)))
 ````
   
+  
 Translates the error messages if necessary
 ````kotlin
                     .onError()
                     .map(ApiException::class to RuntimeException::class)
 ````
-
+  
+  
 Runs the codification when the service method is invoked 
 ````kotlin
     fun saveApproved(request: CorporateCustomer): CorporateCustomer {
