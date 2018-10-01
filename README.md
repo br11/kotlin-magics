@@ -15,7 +15,7 @@ Have all this by programming at the appropriate level of abstraction.
 Creating your programming languages.  
   
 
-### Implementation
+### Content
 
 Here you will find **RESTful API | Swagger | Reflection**.  
 And **Domain-specific Language**. 
@@ -32,7 +32,7 @@ Then a DSL (Domain-specific Language) was designed:.
 2. to make data translation to be declarative, so it's easy to understand and maintain,. 
 3. to make the resulting codification to be very abstract, so it's not affected by details that permanently need clarification.  
 
-### Basics
+### Implementation
 #### build
 ./gradlew clean build install -x test
 
@@ -62,7 +62,7 @@ listening on:
   http://localhost:8080/
 ```
 
-### More
+### Details
 
 #### Documenting API with javadoc - Magic with Kooby & ApiTool
 Here is our API implemented with Jooby for Kotlin.  
