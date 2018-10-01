@@ -23,11 +23,13 @@ Here you will find **RESTful API | Swagger | Reflection**.
 And **Domain-specific Language**. 
   
   
-This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with o date to a release in prodution. The intention is to use the current API but without creating a dependency to it.  
-For this purpose we create one Mock API with field names in English and another one having almost the same fields but with names in Portuguese.  
+This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with no date to a release in prodution. The intention is to use the current API but without creating a dependency to it.  
   
   
-Then a DSL (Domain-specific Language) was designed
+For this purpose in this POC we created one API with field names in English and another one having almost the same fields but with names in Portuguese.  
+  
+  
+And then created a DSL (Domain-specific Language)...
 1. to make the code to be short, so it's easy to write and read;
 2. to make data translation to be declarative, so it's easy to understand and modify. 
 3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarification.  
