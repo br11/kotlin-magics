@@ -1,5 +1,7 @@
 # kotlin-magics
 
+### Motivation
+
 **Lean Principles**   
 * **Deliver as fast as possible**  
 * **Decide as late as possible**   
@@ -12,7 +14,7 @@ Write code that doesn't became obsolete as you learn more about the business.
 Have all this by programming at the appropriate level of abstraction.  
   
   
-Creating your programming languages.  
+Creating your own programming language.  
   
 
 ### Content of this page
