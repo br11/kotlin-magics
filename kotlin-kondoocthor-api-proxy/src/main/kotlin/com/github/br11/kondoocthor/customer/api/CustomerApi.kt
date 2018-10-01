@@ -1,3 +1,4 @@
+@file:JvmName("CustomerApiJava")
 package com.github.br11.kondoocthor.customer.api
 
 import com.github.br11.kondoocthor.customer.domain.CorporateCustomer
@@ -49,9 +50,7 @@ class CustomerApi : Kooby({
          * @return Returns `200` with a single CorporateCustomer or `404`
          */
         get("/:ulid") {
-            val ulid = param<String>("ulid")
-
-            CorporateCustomer(ulid)
+            CorporateCustomerService().retrieveApproved(param<String>("ulid"))
         }
 
         /**
@@ -61,9 +60,7 @@ class CustomerApi : Kooby({
          * @return Returns a saved CorporateCustomer.
          */
         post {
-            val request = body<CorporateCustomer>()
-
-            CorporateCustomerService().saveApproved(request)
+             CorporateCustomerService().saveApproved(body<CorporateCustomer>())
         }
 
         /**

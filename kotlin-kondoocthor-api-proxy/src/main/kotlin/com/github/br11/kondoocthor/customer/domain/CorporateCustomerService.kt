@@ -100,6 +100,11 @@ class CorporateCustomerService {
     fun saveApproved(request: CorporateCustomer): CorporateCustomer {
         return proxy.process(request)
     }
+
+    fun retrieveApproved(ulid: String): CorporateCustomer {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 }
 
 fun main(args: Array<String>) {
