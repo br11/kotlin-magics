@@ -113,7 +113,7 @@ The API documentation derived from the Javadoc
 
 #### DLS - Domain-specific Language
 
-The DSL implementation with a **fluid interface** for API Proxing - uhu!!! a lot of reflections behind the scenes:P. 
+The DSL implementation with a **fluid interface** for API Proxing - uhu!!! a lot of reflections behind the scenes :P 
 
 Maybe it's not enough but all I have for now is this brief introduction.  
 Basically it takes a message of one type and sends it upstream after translating into another type. Most of the code is property mapping from the type received through our API into the type required by the uptream API of the third party.
