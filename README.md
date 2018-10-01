@@ -218,17 +218,17 @@ class CorporateCustomerService {
     
 **Let's have a look at this in more detail**  
 
-
+  
 Sets the upstream API that in our case is not a upstream http server but a java class from a third-party SDK.
 ````kotlin
             use(GlobaltagcadastroclienteApi())
 ````
-
+  
 Receives the requests from our clients
 ````kotlin
                     .receive(CorporateCustomer::class)
 ````
-
+  
 Sending requests upstream making the data mapping and translations
 ````kotlin
                     .passTo(GlobaltagcadastroclienteApi::salvarPessoaJuridicaAprovadaUsingPOST)
@@ -266,12 +266,12 @@ Sending requests upstream making the data mapping and translations
                                                             PhoneNumber::number to TelefonePessoaAprovadaPersistValue::setTelefone,
                                                             PhoneNumber::extension to TelefonePessoaAprovadaPersistValue::setRamal)))
 ````
-
+  
 Gets the upstream response 
 ````kotlin
                     .getUpstreamResponse()
 ````
-
+  
 Responds to our client with the upstream response translated into our response message
 ````kotlin
                     .respond(CorporateCustomer::class)
@@ -309,7 +309,7 @@ ok
                                                             TelefonePessoaAprovadaResponse::getTelefone to PhoneNumber::number,
                                                             TelefonePessoaAprovadaResponse::getRamal to PhoneNumber::extension)))
 ````
-
+  
 Translates the error messages if necessary
 ````kotlin
                     .onError()
