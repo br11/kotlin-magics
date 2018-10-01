@@ -1,6 +1,6 @@
 # kotlin-magics
 
-### Motivation
+### Prologue
 
 **Lean Principles**   
 * **Deliver as fast as possible**  
