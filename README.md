@@ -23,16 +23,14 @@ Here you will find **RESTful API | Swagger | Reflection**.
 And **Domain-specific Language**. 
   
   
-This project is a POC for a project requiring a translation between two very similar APIs.  
-For this purpose we create one API with field names in English and another one having almost the same fields but with names in Portuguese.  
-
-
-
-
-Then a DSL (Domain-specific Language) was designed:. 
+This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with o date to a release in prodution. The intention is to use the current API but without creating a dependency to it.  
+For this purpose we create one Mock API with field names in English and another one having almost the same fields but with names in Portuguese.  
+  
+  
+Then a DSL (Domain-specific Language) was designed
 1. to make the code to be short, so it's easy to write and read;
 2. to make data translation to be declarative, so it's easy to understand and modify. 
-3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarifications.  
+3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarification.  
 
 ### See it on the fly
 #### build
@@ -66,7 +64,7 @@ listening on:
 
 ### The implementation
 
-#### Documenting API with javadoc - Magic with Kooby & ApiTool
+#### Documenting API with javadoc - magic with Kooby & ApiTool
 Here is our API implemented with Jooby for Kotlin.  
 The decision of using Jooby was made mainly because it implements a large number of integrations, including one with Swagger that generates the REST API documentation from the Javadoc.
 
@@ -216,7 +214,7 @@ class CorporateCustomerService {
 ````
   
     
-**In details**  
+**Let's have a look at this in more detail**  
 
 
 Sets the upstream API that in our case is not a upstream http server but a java class from a third-party SDK.
