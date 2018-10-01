@@ -30,9 +30,9 @@ For this purpose we create one API with field names in English and another one h
 
 
 Then a DSL (Domain-specific Language) was designed:. 
-1. to make the code to be short, so it's easy to write;
-2. to make data translation to be declarative, so it's easy to understand and maintain,. 
-3. to make the resulting codification to be very abstract, so it's not affected by details that permanently need clarification.  
+1. to make the code to be short, so it's easy to write and read;
+2. to make data translation to be declarative, so it's easy to understand and modify. 
+3. to make the resulting codification to be in high level of abstraction, so it's not affected by details that permanently need clarifications.  
 
 ### See it working
 #### build
@@ -116,8 +116,8 @@ The API documentation derived from the Javadoc
 
 The DSL implementation with a **fluid interface** for API Proxing - uhu!!! a lot of reflections behind the scenes:P. 
 
-I know it needs clarification but all I have for now is this brief introduction.  
-Basically it takes a message of one type and sends it upstream after translating into another one. Most of the code is property mapping from the type received through our API into the type required by the uptream API of the third party.
+Maybe it's not enough but all I have for now is this brief introduction.  
+Basically it takes a message of one type and sends it upstream after translating into another type. Most of the code is property mapping from the type received through our API into the type required by the uptream API of the third party.
 
 ````kotlin
 class CorporateCustomerService {
