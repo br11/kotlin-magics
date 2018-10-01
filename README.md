@@ -20,7 +20,7 @@ Creating your own programming language.
 ### Content of this page
 
 Here you will find **RESTful API | Swagger | Reflection**.  
-And **Domain-specific Language**. 
+And a **Domain-specific Language**. 
   
   
 This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with no date to a release in prodution. The intention is to use the current API but without creating a dependency to it.  
