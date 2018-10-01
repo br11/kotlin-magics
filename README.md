@@ -34,7 +34,7 @@ Then a DSL (Domain-specific Language) was designed:.
 2. to make data translation to be declarative, so it's easy to understand and modify. 
 3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarifications.  
 
-### See it working
+### See it on the fly
 #### build
 ./gradlew clean build install -x test
 
