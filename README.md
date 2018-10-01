@@ -39,8 +39,7 @@ And then created a DSL (Domain-specific Language)...
 ./gradlew clean build install -x test
 
 #### Running
-
-> com.github.br11.kondoocthor.customer.api.CustomerApi::main
+./gradlew run
 
 ```
 [main] INFO com.github.br11.kondoocthor.customer.api.CustomerApi - [dev@netty]: Server started in 1266ms
