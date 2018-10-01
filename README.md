@@ -197,7 +197,7 @@ class CorporateCustomerService {
                                             SocioAprovadoResponse::getDataNascimento to Partner::birthDate,
                                             SocioAprovadoResponse::getProfissao to Partner::occupation,
                                             SocioAprovadoResponse::getEmail to Partner::email,
-ok
+
                                             nestedList(SocioAprovadoResponse::getTelefones to Partner::phoneNumbers)
                                                     .mapping(TelefonePessoaAprovadaResponse::getIdTipoTelefone to PhoneNumber::idType,
                                                             TelefonePessoaAprovadaResponse::getDdd to PhoneNumber::areaCode,
