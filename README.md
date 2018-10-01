@@ -32,7 +32,7 @@ For this purpose we create one API with field names in English and another one h
 Then a DSL (Domain-specific Language) was designed:. 
 1. to make the code to be short, so it's easy to write and read;
 2. to make data translation to be declarative, so it's easy to understand and modify. 
-3. to make the resulting codification to be in high level of abstraction, so it's not affected by details that permanently need clarifications.  
+3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarifications.  
 
 ### See it working
 #### build
@@ -68,7 +68,7 @@ listening on:
 
 #### Documenting API with javadoc - Magic with Kooby & ApiTool
 Here is our API implemented with Jooby for Kotlin.  
-The decision of using Jooby was made mainly because the ApiTool module of Jooby implements a large number of integrations, including one with Swagger that generates the REST API documentation from the Javadoc.
+The decision of using Jooby was made mainly because it implements a large number of integrations, including one with Swagger that generates the REST API documentation from the Javadoc.
 
 Source code
 ````kotlin
@@ -219,7 +219,7 @@ class CorporateCustomerService {
 **In details**  
 
 
-Sets the upstream API that in our case is not a upstream http server but an java class from a third-party SDK.
+Sets the upstream API that in our case is not a upstream http server but a java class from a third-party SDK.
 ````kotlin
             use(GlobaltagcadastroclienteApi())
 ````
