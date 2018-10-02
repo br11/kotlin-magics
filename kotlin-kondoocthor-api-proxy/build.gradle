@@ -1,23 +1,13 @@
 plugins {
-    //id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.2.61'
     id 'application'
-   // id 'kotlin'
 }
 
 mainClassName = "com.github.br11.kondoocthor.customer.api.CustomerApiJava"
 
-repositories {
-    maven { url '/Users/marcio.luisdasilva/.m2/repository' }
-    mavenCentral()
-    maven { url 'http://jcenter.bintray.com' }
-}
-
 dependencies {
     compile 'com.github.br11:kotlin-api-proxy:1.0-SNAPSHOT'
-
     compile 'br.com.conductor.pier:pier-sdk-java:2.74.2'
-
     compile 'de.huxhorn.sulky:de.huxhorn.sulky.ulid:8.2.0'
 }
 

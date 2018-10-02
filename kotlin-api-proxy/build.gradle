@@ -1,12 +1,5 @@
 plugins {
-    //id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.2.61'
-}
-
-repositories {
-    maven { url '/Users/marcio.luisdasilva/.m2/repository' }
-    mavenCentral()
-    maven { url 'http://jcenter.bintray.com' }
 }
 
 dependencies {
@@ -40,7 +33,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-gradle-plugin:1.2.41"
     compile "org.jooby:jooby-gradle-plugin:1.5.1"
     compile "org.junit.platform:junit-platform-gradle-plugin:1.0.0"
-    
 }
 
 compileKotlin {
@@ -49,3 +41,4 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
