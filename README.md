@@ -35,7 +35,7 @@ And then created a DSL (Domain-specific Language)...
 3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarification.  
 
 ### See it on the fly
-#### build
+#### building
 ./gradlew clean build install -x test
 
 #### Running
