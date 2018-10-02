@@ -1,4 +1,4 @@
-# kotlin-magics
+# kotlin-serverside
 
 ### Prologue
 
@@ -23,14 +23,14 @@ Here you will find **RESTful API | Swagger | Reflection**.
 And a **Domain-specific Language**. 
   
   
-This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with no date to a release in prodution. The intention is to use the current API but without creating a dependency to it.  
+This project is a POC for a project requiring a translation between two very similar APIs where the first API is running in production and the second is specified but with no date to go into production. The strategy is to use the current API but without creating a dependency to it.  
   
   
-For this purpose in this POC we created one API with field names in English and another one having almost the same fields but with names in Portuguese.  
+For this purpose in this POC I created one API with field names in English and another one having almost the same fields but with names in Portuguese.  
   
   
 And then created a DSL (Domain-specific Language)...
-1. to make the code to be short, so it's easy to write and read;
+1. to make the code to be short, so it's easy to read and write;
 2. to make data translation to be declarative, so it's easy to understand and modify. 
 3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarification.  
 
@@ -222,14 +222,14 @@ Sets the upstream API that in our case is not a upstream http server but a java 
 ````kotlin
             use(GlobaltagcadastroclienteApi())
 ````
-  
-  
+   
+   
 Receives the requests from our clients
 ````kotlin
                     .receive(CorporateCustomer::class)
 ````
-  
-  
+   
+   
 Sending requests upstream making the data mapping and translations
 ````kotlin
                     .passTo(GlobaltagcadastroclienteApi::salvarPessoaJuridicaAprovadaUsingPOST)
@@ -267,14 +267,14 @@ Sending requests upstream making the data mapping and translations
                                                             PhoneNumber::number to TelefonePessoaAprovadaPersistValue::setTelefone,
                                                             PhoneNumber::extension to TelefonePessoaAprovadaPersistValue::setRamal)))
 ````
-  
-  
+   
+   
 Gets the upstream response 
 ````kotlin
                     .getUpstreamResponse()
 ````
-  
-  
+   
+   
 Responds to our client with the upstream response translated into our response message
 ````kotlin
                     .respond(CorporateCustomer::class)
@@ -312,15 +312,15 @@ ok
                                                             TelefonePessoaAprovadaResponse::getTelefone to PhoneNumber::number,
                                                             TelefonePessoaAprovadaResponse::getRamal to PhoneNumber::extension)))
 ````
-  
-  
+   
+   
 Translates the error messages if necessary
 ````kotlin
                     .onError()
                     .map(ApiException::class to RuntimeException::class)
 ````
-  
-  
+   
+   
 Runs the codification when the service method is invoked 
 ````kotlin
     fun saveApproved(request: CorporateCustomer): CorporateCustomer {
