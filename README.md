@@ -30,7 +30,7 @@ For this purpose in this POC I created one API with field names in English and a
   
   
 And then created a DSL (Domain-specific Language)...
-1. to make the code to be short, so it's easy to read and write;
+1. to make the code to be short, so it's fast to read and write;
 2. to make data translation to be declarative, so it's easy to understand and modify. 
 3. to make the code to be in high level of abstraction, so it's not affected by details that permanently need clarification.  
 
